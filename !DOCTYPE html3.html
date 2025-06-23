@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Retrait de stock RATP</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:30px;}
+    label{display:block;margin-top:15px;font-weight:bold;}
+    select, input[type="number"], textarea, button{
+      width:100%;max-width:400px;padding:6px;margin-top:4px;
+    }
+    button{cursor:pointer;margin-top:20px;}
+  </style>
+</head>
+<body>
+
+  <h2>Formulaire de retrait de stock</h2>
+
+  <!-- ⬇⬇⬇  INSÈRE ICI TON ENDPOINT FORMSPREE  ⬇⬇⬇ -->
+  <form action="https://formspree.io/f/mnnvgnnj" method="POST">
+    <!-- Choix du produit -->
+    <label for="produit">Produit :</label>
+    <select name="Produit" id="produit" required>
+      <optgroup label="Stock EM">
+        <option>Contact de sécurité</option>
+        <option>Eclairage caisson</option>
+        <option>Peigne jaune</option>
+        <option>Peigne blanc avec bande jaune</option>
+        <option>Flèche de sens</option>
+        <option>Chasse tête</option>
+        <option>Transfo MBP 10005 400 V</option>
+        <option>Axe des marches</option>
+        <option>Prise mâle /femelle artigne</option>
+        <option>Eclairage peigne</option>
+        <option>Relais</option>
+        <option>Radar</option>
+        <option>Ecran IHM</option>
+        <option>Sangle de fixation des bâches</option>
+        <option>Batterie UPS</option>
+        <option>Alimentation batterie UPS</option>
+      </optgroup>
+      <optgroup label="Stock Ascenseur">
+        <option>Boitier PHITEC</option>
+        <option>Telecommande PHITEC</option>
+        <option>Identificateur des câbles</option>
+        <option>Tresse de terre cuivre</option>
+        <option>Bande anti-dérapante adhésive</option>
+        <option>Serrure 10 574</option>
+        <option>Produit G</option>
+        <option>Produit H</option>
+        <option>Produit I</option>
+        <option>Produit J</option>
+        <option>Produit K</option>
+      </optgroup>
+    </select>
+
+    <!-- Quantité retirée -->
+    <label for="quantite">Quantité retirée :</label>
+    <input type="number" name="Quantité" id="quantite" min="1" required>
+
+    <!-- Commentaire facultatif -->
+    <label for="commentaire">Commentaire :</label>
+    <textarea name="Commentaire" id="commentaire" rows="4" placeholder="(Facultatif)"></textarea>
+
+    <!-- Sujet de l’e-mail (facultatif mais pratique) -->
+    <input type="hidden" name="_subject" value="Nouveau retrait de stock">
+
+    <!-- URL de redirection après envoi (facultatif) -->
+    <!-- <input type="hidden" name="_next" value="https://ton-site.com/merci.html"> -->
+
+    <button type="submit">Envoyer le formulaire</button>
+  </form>
+
+</body>
+</html>

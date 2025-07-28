@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <title>Retrait de stock RATP</title>
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:30px;}
-    label{display:block;margin-top:15px;font-weight:bold;}
-    select, input[type="number"], textarea, button{
-      width:100%;max-width:400px;padding:6px;margin-top:4px;
+    body { font-family: Arial, Helvetica, sans-serif; margin: 30px; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    select, input[type="number"], input[type="email"], textarea, button {
+      width: 100%; max-width: 400px; padding: 6px; margin-top: 4px;
     }
-    button{cursor:pointer;margin-top:20px;}
+    button { cursor: pointer; margin-top: 20px; }
   </style>
 </head>
 <body>
 
   <h2>Formulaire de retrait de stock</h2>
 
-  <!-- ⬇⬇⬇  INSÈRE ICI TON ENDPOINT FORMSPREE  ⬇⬇⬇ -->
   <form action="https://formspree.io/f/mnnvgnnj" method="POST">
+    
+    <!-- Adresse e-mail -->
+    <label for="email">Votre adresse e-mail :</label>
+    <input type="email" name="email" id="email" required>
+
     <!-- Choix du produit -->
     <label for="produit">Produit :</label>
     <select name="Produit" id="produit" required>
@@ -62,11 +66,11 @@
     <label for="commentaire">Commentaire :</label>
     <textarea name="Commentaire" id="commentaire" rows="4" placeholder="(Facultatif)"></textarea>
 
-    <!-- Sujet de l’e-mail (facultatif mais pratique) -->
+    <!-- Sujet de l’e-mail -->
     <input type="hidden" name="_subject" value="Nouveau retrait de stock">
 
-    <!-- URL de redirection après envoi (facultatif) -->
-    <!-- <input type="hidden" name="_next" value="https://ton-site.com/merci.html"> -->
+    <!-- Redirection après envoi -->
+    <input type="hidden" name="_next" value="https://elamri-yassine.github.io/stock-html/merci.html">
 
     <button type="submit">Envoyer le formulaire</button>
   </form>

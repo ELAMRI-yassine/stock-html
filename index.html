@@ -49,6 +49,16 @@
       font-weight: bold;
       color: #004e94;
     }
+
+    .checkbox-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+    }
   </style>
 </head>
 <body>
@@ -61,20 +71,27 @@
     <label for="nom">Votre nom :</label>
     <input type="text" name="Nom" id="nom" required>
 
+    <!-- Entrée / Sortie -->
+    <label>Type de mouvement :</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="Type[]" value="Entrée"> Entrée</label>
+      <label><input type="checkbox" name="Type[]" value="Sortie"> Sortie</label>
+    </div>
+
     <!-- Choix du produit -->
     <label for="produit">Produit :</label>
     <select name="Produit" id="produit" required>
       <optgroup label="Stock Ascenseur">
         <option>Boitier PHITEC</option>
-        <option>Telecommande PHITEC</option>
+        <option>Télécommande PHITEC</option>
         <option>Identificateur des câbles</option>
         <option>Tresse de terre cuivre</option>
-        <option>Bande anti dérapante adhésive</option>
+        <option>Bande antidérapante adhésive</option>
         <option>Contact à clé 10 574</option>
         <option>Amphitec</option>
-        <option>Doigts magnétique</option>
-        <option>Aimant petit taille</option>
-        <option>Aimant grand taille</option>
+        <option>Doigts magnétiques</option>
+        <option>Aimant petite taille</option>
+        <option>Aimant grande taille</option>
         <option>Panachrome</option>
         <option>Boitier Aral</option>
         <option>Boitier KONEXION</option>
@@ -82,7 +99,7 @@
         <option>Alimentation caméra</option>
         <option>Batterie vision</option>
         <option>Bande anti pincement</option>
-        <option>Scotch elec</option>
+        <option>Scotch élec</option>
         <option>Contact à clé 9002</option>
         <option>Contact à clé 9001</option>
         <option>Clé 9002</option>
@@ -90,45 +107,45 @@
         <option>Clé 10574</option>
         <option>Serrure CEX 9002</option>
         <option>Serrure CEX 9002 sans bateuse</option>
-        <option>Serrue 3123E</option>
+        <option>Serrure 3123E</option>
         <option>Tirette trappe ASC</option>
-        <option>L'huile guide</option>
+        <option>Huile de guide</option>
         <option>Bornier 35 mm vert</option>
         <option>Bornier 16 mm gris</option>
-        <option>Cable RJ 45</option>
-        <option>Batterie RBO ERD20 (8 nécessaire)</option>
-        <option>Batterie RBO ERD18 (8 nécessaire)</option>
-        <option>Batterie RBO SSB (8 nécessaire)</option>
+        <option>Câble RJ 45</option>
+        <option>Batterie RBO ERD20 (8 nécessaires)</option>
+        <option>Batterie RBO ERD18 (8 nécessaires)</option>
+        <option>Batterie RBO SSB (8 nécessaires)</option>
       </optgroup>
       <optgroup label="Stock Escalier Mécanique">
         <option>Contact de sécurité</option>
-        <option>Eclairage caisson</option>
+        <option>Éclairage caisson</option>
         <option>Peigne jaune</option>
         <option>Peigne blanc avec bande jaune</option>
         <option>Flèche de sens</option>
         <option>Chasse tête</option>
         <option>Transfo MBP 10005 400 V</option>
         <option>Axe des marches</option>
-        <option>Prise mâle /femelle artigne</option>
-        <option>Eclairage peigne</option>
+        <option>Prise mâle / femelle Artigne</option>
+        <option>Éclairage peigne</option>
         <option>Relais</option>
         <option>Radar</option>
-        <option>Ecran IHM</option>
+        <option>Écran IHM</option>
         <option>Sangle de fixation des bâches</option>
         <option>Batterie UPS</option>
         <option>Alimentation batterie UPS</option>
-        <option>BUS ADAPTER SIMENS</option>
+        <option>BUS ADAPTER SIEMENS</option>
         <option>Bouton stop</option>
         <option>Support bouton stop</option>
         <option>Marches 60 mm</option>
         <option>Commande inspection</option>
-        <option>Commande inspection sans cable</option>
+        <option>Commande inspection sans câble</option>
         <option>Pompe</option>
-        <option>Modules INPUT SIMENS</option>
-        <option>Module OUTPOUT SIMENS</option>
-        <option>Interface Module SIMENS</option>
-        <option>Contact Block SIMENS</option>
-        <option>Disjoncteur SIMENS</option>
+        <option>Modules INPUT SIEMENS</option>
+        <option>Module OUTPUT SIEMENS</option>
+        <option>Interface Module SIEMENS</option>
+        <option>Contact Block SIEMENS</option>
+        <option>Disjoncteur SIEMENS</option>
         <option>Boitier cuiqcuiq</option>
         <option>Graisse</option>
       </optgroup>
